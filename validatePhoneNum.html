@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(b) {
+        let viettel =/[8,4]{2}[0-9]{9}/g;
+        let vina = /[4,3]{2}[0-9]{9}/g;
+        let mobi = /[6,4]{2}[0-9]{9}/g;
+        let result = viettel.test(b);
+        let testVina = vina.test(b);
+        let testMobi = mobi.test(b);
+        if (result == true){
+            alert("Day la mang Viettel");
+        } else if (testVina== true){
+            alert("Day la mang vina");
+        } else if (testMobi== true){
+            alert("Day la mang Mobi");
+        } else {
+            alert("So dien thoai khong duoc ho tro, vui long nhap lai");
+        }
+    };
+    let a = Number(prompt("Nhap so dien thoai: ",""));
+    check(a);
+
+</script>
+</body>
+</html>
